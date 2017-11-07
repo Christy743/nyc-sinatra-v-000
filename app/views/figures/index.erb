@@ -1,0 +1,18 @@
+<table>
+  <th>Person Name</th>
+  <tr>
+    <% @figures.each do |figure| %>
+      <td align="center"><a href="/figures/<%= figure.id %>"><%= figure.name %></a>
+          <br></br>
+        <ul>
+          <% figure.titles.each do |title| %>
+            <br></br>
+          <li><%=title.name%></li>
+          <% end %>
+        </ul>
+      </tr>
+    </td>
+    <% end %>
+  </table>
+
+  <a class="button" href="/">Go Home</a>
